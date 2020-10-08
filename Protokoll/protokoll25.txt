@@ -1,0 +1,28 @@
+# Meeting Agenda
+
+Group: 1 (gruppnamn: New Five)
+Date: 5/10 15:00-16:00
+Chair: TDA 367, Chalmers
+Participants: Moa Berglund, Markus Grahn, Victor Cousin, Christian Lind, Oliver Andersson
+Facilitator: Oliver Karmetun
+Sekreterare: Oliver Andersson
+
+## Objectives 
+
+- arbeta med peer review
+
+## Reports from previous meeting
+
+N/A
+
+## Discussion items 
+
+N/A
+
+## Outcomes and assignments 
+
+1. Feedback är skrivet. Lämnar tid till fredag (2020-10-09) att ändra på dokumentet.
+
+## Wrap up
+ 
+- Nästa möte: 8/10. Sammanfattning av 7/10 samt fortsättning med kodning

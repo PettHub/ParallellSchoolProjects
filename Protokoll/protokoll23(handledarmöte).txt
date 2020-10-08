@@ -1,0 +1,36 @@
+# Meeting Agenda
+
+Group: 1 (gruppnamn: New Five)
+Date: 2/10 15:00-16:00
+Chair: TDA 367, Chalmers
+Participants: Moa Berglund, Markus Grahn, Victor Cousin, Christian Lind, Oliver Andersson
+Facilitator: Oliver Karmetun
+Sekreterare: Moa Berglund
+
+## Objectives 
+
+- Handledarmöte! 
+- Fråga insamlade frågor från veckan till handledare
+- Ta del av feedback från handledare
+
+## Reports from previous meeting
+
+- Förra mötet gjorde vi färdigt denna versionen av RAD och SDD inför Peer Review. Fixade förbättringar i koden i och med att vi beslutat att strukturera om klasserna Workshift och Department. 
+
+## Discussion items 
+
+1. Ska vi ha konstruktor i uml?  
+2. Hur är det med tekniska user stories? ja/nej? fått olika svar från kursen vid olika tillfällen (föreläsningar, slides, handledarmöte)
+3. Vad innebär det för beroenden när en klass använder nyckeln till en hashmap den har/använder?
+4. Vi har i nuläget ganska "plottriga" UML-diagram med mycekt metoder och variabler - bör vi rensa bort en del eller är det inte en nackdel?
+## Outcomes and assignments 
+
+1. Handledare tror inte det skadar, så vi har det.
+2. Handledare fått svar från Pelle/Alex att de inte ska vara tekniska med som en utomstående inte skulle förså. Efter diskussion kom vi fram till att ha kvar våra tekniska ändå då de är övergripande - för att få respons från andra ögon i peer review
+3. Handledare återkommer och vi utgår tills dess från att det är ett "uses"-beroende mellan klassen och nyckeln tills annat framgår
+4. Handledare ska kolla upp om det kan vara negativt att vi har för plottriga diagram, eller om det egentligen bara är extraarbete vi gjort som kan vara kvar. Tills dess är det kvar. 
+5. Handledare återkom från förra veckans fråga med att testerna inte bör kommenteras med javadoc, utan enbart vanliga(//) om fallet kräver
+
+## Wrap up
+ 
+- Nästa möte: 05/10 15:00 måndagsmöte för att planera nästa sprint (bestämma vilka user stories i trello vi ska ta oss an) och även jobba tills kl 17 för att göra färdigt denna veckans sprint som vi inte hann färdigt (2 user stories).
