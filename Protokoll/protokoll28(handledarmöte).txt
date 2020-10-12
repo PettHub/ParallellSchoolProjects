@@ -1,0 +1,33 @@
+# Meeting Agenda
+
+Group: 1 (gruppnamn: New Five)
+Date: 9/10 15:00-16:00
+Chair: TDA 367, Chalmers
+Participants: Moa Berglund, Markus Grahn, Victor Cousin, Christian Lind, Oliver Andersson
+Facilitator: Oliver Karmetun
+Sekreterare: Moa Berglund
+
+## Objectives 
+
+- Handledarmöte! 
+
+## Reports from previous meeting
+
+- Förra mötet slutförde vi till stora delar sprinten och alla förväntade user stories förutom "Visuell separation mellan avdelningar" är färdiga. Christian tog på sig att finslipa/refaktorera några delar i modellen under helgen.
+
+## Discussion items 
+
+1. Har handledare fått återkoppling på förra veckans frågor från Pelle/Alex? 
+
+## Outcomes and assignments 
+
+1. Pelle ansåg också att det var "uses" beroende mellan en klass och nyckelns klass som den använder i sin hashmap
+2. Handledare kollade på det körbara och ansåg att vi var på god väg.
+3. Handledare tipsade om att inte prioritera att kunna ladda in/spara filer, utan hellre hårdkoda data till modellen som i sin tur hanterar datan (skapa service-paket) som om den kom från en separat fil. 
+   Det är viktigare med ett väl strukturerat program än hantering av databaser i denna kurs.  
+4. Nästa handledarmöte ska vi ha färdigt ppt att visa upp inför redovisningen veckan därpå.
+5. Handledare tipsar om gitkraken för kommande projekt - mer möjligheter än github desktop som vi använt hittills.
+
+## Wrap up
+ 
+- Nästa möte: 12/10 15:00 måndagsmöte för att planera nästa sprint (bestämma vilka user stories i trello vi ska ta oss an).
