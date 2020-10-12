@@ -1,0 +1,40 @@
+# Meeting Agenda
+
+Group: 1 (gruppnamn: New Five)
+Date: 12/10 15:00-16:00
+Chair: TDA 367, Chalmers
+Participants: Moa Berglund, Markus Grahn, Victor Cousin, Christian Lind, Oliver Andersson
+Facilitator: Oliver Karmetun
+Sekreterare: Victor Cousin
+
+## Objectives 
+
+- Planera inför veckan som kommer
+
+## Reports from previous meeting
+
+- Christian har under helgen arbetat med det sista i sprinten där han: Gjorde om WeekHandler så att den har metoder för att addera till Date objektet, istället för som tidigare 1000 * 60 * x så kan man nu skriva plusMinutes(x). Detta för att det ska bli enklare att förstå vad man adderar.
+Fortsatte refactorera metoder som hade missats i fredags. Skrev kommentarer till kvarvarande metoder i Admin.
+- Sprinten från förra veckan är nu färdig
+- Vi ska hårdkoda data i ett service-paket  
+- Powerpoint behövs inför redovisning
+
+## Discussion items 
+
+1. Vad ska vara färdigt denna sprint?
+2. Vem ska göra vad?
+3. Vilka arbetspass ska vi ha denna vecka?
+
+## Outcomes and assignments 
+
+1. Vi kör samma arbetspass som förra veckan.
+2. Sprinten planerades upp, och alla user stories ska vara färdiga efter denna sprint.
+3. Oliver arbetar med "Visuell seperation mellan avdelningar" och "Kunna lägga in anställning i vy och modell"
+4. Christian ska arbeta med "Notis vid inkomplett schema", "Exception" och "Schemahantering" med Markus. 
+5. Markus ska skapa ett service-paket och sedan arbeta med powerpoint tillsammans med Victor och Moa.
+6. Victor och Moa ska arbeta med "Vy för skapa pass" och "registrera ledighet i vyn hos anställd".
+
+
+## Wrap up
+ 
+- Nästa möte: 13/10 10:00 då ska vi arbeta med sprinten.
