@@ -1,0 +1,34 @@
+# Meeting Agenda
+
+Group: 1 (gruppnamn: New Five)
+Date: 13/10 10:00-11:45
+Chair: TDA 367, Chalmers
+Participants: Moa Berglund, Markus Grahn, Victor Cousin, Christian Lind, Oliver Andersson
+Facilitator: Oliver Karmetun
+Sekreterare: Oliver Andersson
+
+## Objectives 
+
+- Arbeta med tilldelade User Stories
+
+## Reports from previous meeting
+
+- Alla har blivit tilldelade user stories och det verkar finnas risk att dom blir klara tidigt.
+- Ny sprint är påbörjad.
+- Powerpoint behövs inför redovisning, Moa har tagit på sig ansvaret att starta upp den.
+
+## Discussion items 
+
+N/A
+
+## Outcomes and assignments 
+
+1. Markus och Christian har börjat jobba på employeesorter.
+2. Moa och Victor blev klara med "Registrera ledighet".
+3. Moa och Victor har börjat med vyn för att skapa pass, saknar funtionalitet.
+4. Oliver har börjat med Schemat.
+
+
+## Wrap up
+ 
+- Nästa möte: 15/10 10:00 då ska vi arbeta med sprinten.
