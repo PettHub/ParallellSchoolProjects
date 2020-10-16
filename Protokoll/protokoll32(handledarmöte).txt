@@ -1,0 +1,31 @@
+# Meeting Agenda
+
+Group: 1 (gruppnamn: New Five)
+Date: 15/10 17:00-17:30
+Chair: TDA 367, Chalmers
+Participants: Moa Berglund, Markus Grahn, Victor Cousin, Christian Lind, Oliver Andersson
+Facilitator: Oliver Karmetun
+Sekreterare: Moa Berglund
+
+## Objectives 
+
+- Handledarmöte! 
+- Vi hade inga frågor att rådfråga handledare om
+
+## Reports from previous meeting
+
+- Förra mötet gjordes ppt för redovisningen. Även en stor merge mellan brancherna upstream master och GUI1.1.
+ GUI fortsatte utvecklas och log in och notifikationssystem skapades i modellen. 
+
+## Discussion items 
+
+1. Hur skulle vi kunna förbättra ppt?
+
+
+## Outcomes and assignments 
+1. Handledare kollade på vår körbara version och tkr det ser bra ut. Vi borde hinna färdigt med i princip all kod inom några dagar så vi ligger bra till med tiden.
+2. Handledare tipsade om att ppt kan utvecklas med förbättringsområden av appen 
+
+## Wrap up
+ 
+- Nästa möte: 16/10 10:00 fortsätta jobba med det sista i koden.  
