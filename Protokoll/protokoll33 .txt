@@ -1,0 +1,31 @@
+# Meeting Agenda
+
+Group: 1 (gruppnamn: New Five)
+Date: 16/10 10-11:45, 13.15-16:00
+Chair: TDA 367, Chalmers
+Participants: Moa Berglund, Markus Grahn, Victor Cousin, Christian Lind, Oliver Andersson
+Facilitator: Oliver Karmetun
+Sekreterare: Christian Lind
+
+## Objectives 
+
+- Fortsätta med våra user stories
+
+## Reports from previous meeting
+
+- Förra mötet var ett handledarmöte där Oliver Karmetun kollade på våran ppt och vår körbara verision. Han tyckte att vi borde hinna färdigt med koden denna vecka och att vi nästa vecka kan börja fokusera på skrivande. Markus har även lagt till observer pattern så att man inte längre behöver kalla på setWorkDay()
+
+## Discussion items 
+
+1. Inga
+
+## Outcomes and assignments 
+1. Christian har gjort färdigt SendNotification och Login i modellen samt ordnat exceptions för ställen där det tidigare stod "TODO".
+2. Markus har kodat en ImportServicePackage som har hårdkodade data som läggs in i programmet om man väljer att importera via fil. Detta istället för att som som kommunicerats tidigare att all information exporterades. Detta gör att vi får mer tid över till annat.
+3. Moa och Victor har gjort tab för inställningar, gjort färdigt vy för skapa pass, samt att Moa har skrivit header comments
+4. Oliver har gjort fördigt att kunna lägga in anställning i vyn samt user storien Visuell separation mellan avdelningar
+
+
+## Wrap up
+ 
+- Nästa möte: 19/10 15:00 Måndagsmöte för att planera veckan  
