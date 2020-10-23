@@ -7,7 +7,9 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.util.*;
-
+/**
+ * @author Victor Cousin, Moa Berglund, Markus Grahn and Christian Lind
+ */
 public class testEmployeeSorter {
     @Test
     public void testGetQualifiedPersons() {
