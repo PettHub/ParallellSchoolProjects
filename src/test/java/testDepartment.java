@@ -7,7 +7,9 @@ import org.junit.Test;
 import java.util.Date;
 
 import static org.junit.Assert.assertEquals;
-
+/**
+ * @author Victor Cousin, Moa Berglund, Markus Grahn
+ */
 public class testDepartment {
     @Test
     public void testCreateBreak() {
