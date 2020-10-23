@@ -9,7 +9,9 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-
+/**
+ * @author Markus Grahn and Christian Lind
+ */
 public class testWorkShift {
 
     @Test
