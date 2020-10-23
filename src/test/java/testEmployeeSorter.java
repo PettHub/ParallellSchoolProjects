@@ -21,9 +21,6 @@ public class testEmployeeSorter {
         admin.createEmployeeCertificate(ch.getCertificate("Frukt"), admin.getEmployeeByName("moa"), new Date());
         admin.createEmployeeCertificate(ch.getCertificate("Kassa"), admin.getEmployeeByName("Victor"), new Date());
         admin.createEmployeeCertificate(ch.getCertificate("Frukt"), admin.getEmployeeByName("Victor"), new Date());
-        List<Certificate> allcert = new ArrayList<>();
-        allcert.add(ch.getCertificate("Kassa"));
-        allcert.add(ch.getCertificate("Frukt"));
     }
 
     @Test
@@ -69,7 +66,7 @@ public class testEmployeeSorter {
         admin.createNewDepartment("Frukt", 2);
         admin.createNewDepartment("Soffliggare", 1000);
 
-        boolean repeat[] = {true, true, true, true, true, true, true};
+        boolean[] repeat = {true, true, true, true, true, true, true};
         Date d = new Date();
 
         admin.createWorkshift(admin.getDepartmentByName("Kassa"), d.getTime() + 1000, d.getTime() + WeekHandler.plusHours(3), ch.getCertificate("Kassa"), repeat);
@@ -92,8 +89,6 @@ public class testEmployeeSorter {
         admin.getEmployeeSorter().sortPotentialWorkShiftCandidate(employees, workDays);
 
         ArrayList<WorkDay> wd = new ArrayList<>();
-
-        ArrayList<WorkShift> workShifts = new ArrayList<>();
 
         for (int i = 0; i < 5; i++) {
             wd.add(OurCalendar.getInstance().getWorkday(i));
@@ -150,7 +145,7 @@ public class testEmployeeSorter {
         admin.createNewDepartment("Frukt", 2);
         admin.createNewDepartment("Soffliggare", 1000);
 
-        boolean repeat[] = {true, true, true, true, true, true, true};
+        boolean[] repeat = {true, true, true, true, true, true, true};
         Date d = new Date();
 
         admin.createWorkshift(admin.getDepartmentByName("Kassa"), d.getTime() + 1000, d.getTime() + WeekHandler.plusHours(3), ch.getCertificate("Kassa"), repeat);
@@ -172,14 +167,6 @@ public class testEmployeeSorter {
 
         admin.getEmployeeSorter().sortPotentialWorkShiftCandidate(employees, workDays);
 
-        ArrayList<WorkDay> wd = new ArrayList<>();
-
-        ArrayList<WorkShift> workShifts = new ArrayList<>();
-
-        for (int i = 0; i < 5; i++) {
-            wd.add(OurCalendar.getInstance().getWorkday(i));
-        }
-
         // Test sort
         Collections.sort(admin.getEmployeeSorter().workShifts, admin.getEmployeeSorter());
 
@@ -198,13 +185,12 @@ public class testEmployeeSorter {
     @Test
     public void testAllWorkShiftNotFull() {
         Admin admin = Admin.getInstance();
-        CertificateHandler ch = admin.getCertificatehandler();
         admin.createNewEmployee("moa", "123456789231", "moa@email.nej", "0315552566");
         admin.createNewEmployee("Victor", "123456789234", "Victor@haha.ha", "0315562266");
 
         admin.createNewDepartment("Kassa", 10);
 
-        boolean repeat[] = {true, true, true, true, true, true, true};
+        boolean[] repeat = {true, true, true, true, true, true, true};
         Date d = new Date();
 
         admin.createWorkshift(admin.getDepartmentByName("Kassa"), d.getTime() + 1000, d.getTime() + WeekHandler.plusHours(3), repeat);

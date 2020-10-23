@@ -3,6 +3,7 @@ package test.java;
 import main.java.model.Admin;
 import org.junit.Test;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class testLogin {
@@ -12,8 +13,9 @@ public class testLogin {
         Admin admin = Admin.getInstance();
         admin.createNewUser("Markus", "Hemligt!");
         assertTrue(admin.isLoginInformationCorrect("Markus", "Hemligt!"));
+        assertFalse(admin.isLoginInformationCorrect("Markus", "Hemligt"));
         admin.removeUser("Markus", "Hemligt!");
-        assertTrue(admin.isLoginInformationCorrect("Markus", "Hemligt!") == false);
+        assertFalse(admin.isLoginInformationCorrect("Markus", "Hemligt!"));
     }
 
 }

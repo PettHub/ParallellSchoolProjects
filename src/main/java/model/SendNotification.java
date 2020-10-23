@@ -15,10 +15,17 @@ import java.util.Properties;
 
 public class SendNotification {
 
-    public SendNotification(String host, String to, String from, String username, String password, String subject, String text) {
-
-        // Assuming you are sending email from through gmails smtp
-        //String host = "smtp.gmail.com";
+    /**
+     * Sends a normal email with the provided information
+     *
+     * @param host     The host to send from eg smtp.gmail.com for gmail
+     * @param to       The reciver of the mail eg random@gmail.com
+     * @param from     The sender of the mail eg random@gmail.com
+     * @param password The password of the sender
+     * @param subject  The Subject line of the email
+     * @param text     The text of the email
+     */
+    public SendNotification(String host, String to, String from, String password, String subject, String text) {
 
         Properties properties = setProperties(host);
 
@@ -27,10 +34,17 @@ public class SendNotification {
         sendMessage(session, from, to, subject, text);
     }
 
+    /**
+     * Sends a email of missing workshifts
+     *
+     * @param host                The host to send from eg smtp.gmail.com for gmail
+     * @param to                  The reciver of the mail eg random@gmail.com
+     * @param from                The sender of the mail eg random@gmail.com
+     * @param password            The password of the sender
+     * @param subject             The Subject line of the email
+     * @param workshiftsNotFilled A list of workshift not filled
+     */
     public SendNotification(String host, String to, String from, String password, String subject, List<WorkShift> workshiftsNotFilled) {
-
-        // Assuming you are sending email from through gmails smtp
-        //String host = "smtp.gmail.com";
 
         Properties properties = setProperties(host);
 
@@ -38,10 +52,10 @@ public class SendNotification {
 
         StringBuilder sb = new StringBuilder();
 
-        sb.append("There are " + workshiftsNotFilled.size() + " Workshift(s) not filled with ids");
+        sb.append("There are ").append(workshiftsNotFilled.size()).append(" Workshift(s) not filled with ids");
 
         for (WorkShift ws : workshiftsNotFilled) {
-            sb.append("\n" + ws.ID);
+            sb.append("\n").append(ws.ID);
         }
 
         sb.append("\nSincerly EmployeeSorter");
@@ -50,7 +64,7 @@ public class SendNotification {
 
     private Session createSession(Properties properties, String from, String password) {
         // Get the Session object.// and pass username and password
-        Session session = Session.getInstance(properties, new javax.mail.Authenticator() {
+        return Session.getInstance(properties, new Authenticator() {
 
             protected PasswordAuthentication getPasswordAuthentication() {
 
@@ -59,7 +73,6 @@ public class SendNotification {
             }
 
         });
-        return session;
     }
 
     private Properties setProperties(String host) {

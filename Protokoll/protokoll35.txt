@@ -1,0 +1,32 @@
+# Meeting Agenda
+
+Group: 1 (gruppnamn: New Five)
+Date: 19/10 10:00 - 11:45
+Chair: TDA 367, Chalmers
+Participants: Moa Berglund, Markus Grahn, Victor Cousin, Christian Lind, Oliver Andersson
+Facilitator: Oliver Karmetun
+Sekreterare: Oliver Andersson
+
+## Objectives 
+
+- Bugfixa koden och koppla ihop view/controller med funktioner i modellen
+
+## Reports from previous meeting
+
+- 
+
+## Discussion items 
+
+1. Vilka user stories ska tilldelas till vilken person.
+
+## Outcomes and assignments 
+
+1. RAD blev klart av Moa och Victor
+2. Christian gjorde så att man kan ta bort flera certifikat samtidigt, samt översatte gränssnittet, samt se vilka anställda som innehaver ett givet certifikat.
+3. Mail och telefonnummer i gränssnittet Victor
+4. Byta personal på ett pass det korrekta sättet, samt radera pass, utökade servicepaket Markus
+5. Det går att byta personal mellan 2 arbetspass, bugfixade. Lade till att man kan autofylla schemat en vecka framåt. Oliver
+ 
+## Wrap up
+ 
+- Nästa möte: 21/10 13:15-15:00 Arbeta som planerat  

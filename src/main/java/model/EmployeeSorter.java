@@ -17,6 +17,12 @@ public class EmployeeSorter implements Comparator<WorkShift> {
         return Integer.compare(potentialWorkShiftCandidate.get(a).size(), potentialWorkShiftCandidate.get(b).size());
     }
 
+    /**
+     * Sorts a list of potential employees at a specific workshift for the given workday. And sorts the list of workshifts after which has the least amount of potential work candidates
+     *
+     * @param employees List of employees to sort into potential work candidates
+     * @param workDays  The workdays to delegate employees to
+     */
     public void sortPotentialWorkShiftCandidate(List<Employee> employees, List<WorkDay> workDays) {
         ArrayList<Certificate> certificates = new ArrayList<>();
         for (WorkDay workDay : workDays) {
@@ -33,6 +39,9 @@ public class EmployeeSorter implements Comparator<WorkShift> {
         }
     }
 
+    /**
+     * Delegates employees after potentialWorkShiftCandidate and who has the least amount of workshifts
+     */
     public void delegateEmployeeToWorkshift() {
         Date d = new Date();
         boolean isAllOccupied = true;
@@ -52,10 +61,16 @@ public class EmployeeSorter implements Comparator<WorkShift> {
         }
         if (!isAllOccupied) {
             new SendNotification("smtp.gmail.com", "random@gmail.com", "random@gmail.com", "*****", "Workshifts not filled", getEmptyWorkShifts());
+            // funkar men måste lägga in riktiga detaljer
         }
 
     }
 
+    /**
+     * Gets all workshifts that are empty
+     *
+     * @return A list of all empty workshifts
+     */
     private List<WorkShift> getEmptyWorkShifts() {
         ArrayList<WorkShift> notFilled = new ArrayList<>();
         for (WorkShift workShift : workShifts) {

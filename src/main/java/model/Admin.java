@@ -19,8 +19,8 @@ public class Admin implements Observable {
     private final CertificateHandler CERTIFICATEHANDLER;
     private final OurCalendar CALENDAR;
     private final EmployeeSorter EMPLOYEESORTER;
-    private final Login LOGINHANDLER; //TODO private
-    private List<Observer> observers, toBeAdded, toBeRemoved;
+    private final Login LOGINHANDLER;
+    private final List<Observer> observers, toBeAdded, toBeRemoved;
     private static Admin instance = null;
 
     /**
