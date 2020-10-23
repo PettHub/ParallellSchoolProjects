@@ -8,11 +8,13 @@ import main.java.model.WeekHandler;
 import org.junit.Test;
 
 import java.util.Date;
-
+/**
+ * @author Markus Grahn and Christian Lind
+ */
 public class testOccupiedTime {
 
     @Test
-    public void testVacation() { //Kanske funkar men inte helt säkra
+    public void testVacation() { 
         Admin a = Admin.getInstance();
         a.createNewEmployee("mark", "000000131324", "Mark@email.com", "0315552286");
         a.createNewDepartment("Kassa", 1);
