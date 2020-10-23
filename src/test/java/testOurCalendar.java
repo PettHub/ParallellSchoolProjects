@@ -8,7 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
-
+/**
+ * @author Oliver Andersson
+ */
 public class testOurCalendar {
     @Test
     public void testInit() {
