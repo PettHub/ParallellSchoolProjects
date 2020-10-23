@@ -1,0 +1,37 @@
+# Meeting Agenda
+
+Group: 1 (gruppnamn: New Five)
+Date: 5/10 15:00-16:00
+Chair: TDA 367, Chalmers
+Participants: Moa Berglund, Markus Grahn, Victor Cousin, Christian Lind, Oliver Andersson
+Facilitator: Oliver Karmetun
+Sekreterare: Victor Cousin
+
+## Objectives 
+
+- Planera inför denna vecka som kommer
+
+## Reports from previous meeting
+
+Vi behöver arbeta på med koden och fortsätta arbeta med våra User stories.
+
+## Discussion items 
+
+1. Vad behövs bli färdigt? 
+2. Vem ska göra vad?
+3. Vilka tider ska vi arbeta denna vecka?
+
+## Outcomes and assignments 
+
+1. Idag prioterades det att bli färdig med User stories som inte blev helt klara förra veckan.
+2. Det bestämdes att vi skulle lägga tisdagens pass till att arbeta med peer review och att vi lägger till ett pass på onsdag och ytterligare ett pass på fredag.
+3. Oliver arbetade på med GUI där han gör klart flikar i view.
+4. Markus och Christian fortsätter med User storien "Hantera arbetspass" som inte blev färdig förra veckan.
+5. Moa och Victor arbetade med "Garantera alla rast" och blev färdig med alla tasks förutom ett där det krävs lite mer diskussion kring.
+6. Denna vecka ska Christian och Markus arbeta med User storien "Inga felaktiga pass" och sedan ska Markus fortsätta med User storien "Ledighet" 
+7. Moa och Victor ska arbeta med GUI denna vecka med avdelningsfliken
+8. Oliver ska arbeta med visuell seperation mellan avdelningar
+
+## Wrap up
+ 
+- Nästa möte: 6/10, arbeta med peer review

@@ -1,0 +1,31 @@
+# Meeting Agenda
+
+Group: 1 (gruppnamn: New Five)
+Date: 19/10 15:00 - 16:00
+Chair: TDA 367, Chalmers
+Participants: Moa Berglund, Markus Grahn, Victor Cousin, Christian Lind, Oliver Andersson
+Facilitator: Oliver Karmetun
+Sekreterare: Victor Cousin
+
+## Objectives 
+
+- Måndagsmöte för att planera inför veckan
+
+## Reports from previous meeting
+
+- 
+
+## Discussion items 
+
+1. Gå igenom RAD-dokumentet som Moa under helgen har markerat ut vilka User stories som inte i nuläget är fullt uppfyllda. Diskutera vilka som ska implemtenteras eller om någon acceptans inte ska prioteras. 
+2. Vilka arbetspass ska vi ha denna vecka?
+
+## Outcomes and assignments 
+1. Under helgen har Christian fixat en Log in funktion och implementerat denna i vyn.
+2. Gått igenom RAD-dokumentet och bestämt vilka user stories som ska implateras denna vecka.
+3. Planerat i trello och bestämt vilka som ska bli färdiga denna vecka.
+4. Vi kommer ha våra arbetspass på samma tider som förra veckan.
+ 
+## Wrap up
+ 
+- Nästa möte: 20/10 10:00 Arbeta som planerat  

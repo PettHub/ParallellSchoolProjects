@@ -1,0 +1,32 @@
+# Meeting Agenda
+
+Group: 1 (gruppnamn: New Five)
+Date: 9/10 10:00-12:00, 13:15-15:00
+Chair: TDA 367, Chalmers
+Participants: Moa Berglund, Markus Grahn, Victor Cousin, Christian Lind, Oliver Andersson
+Facilitator: Oliver Karmetun
+Sekreterare: Christian Lind
+
+## Objectives 
+
+- Fortsätta med userstories för denna sprint 
+
+## Reports from previous meeting
+
+Oliver har arbetat med grundläggande bitar för GUI:n men den kräver mer funktionallitet från modellen innan man kan koda mer
+Moa och Victor har arbetat med GUI:n i avdelningsfliken
+Markus och Christian har arbetat med userstorien "inga felaktiga pass" samt "ledighet" och har skrivit tester för dem.
+
+## Discussion items 
+
+N/A
+
+## Outcomes and assignments 
+
+1. Markus och Christian har arbetat med att refactorera koden samt ändra acces på metoder från public till private, protected. 
+2. Moa, Victor och Oliver har arbetat med GUI:n och fixat department fliken och en color picker som man kan välja till varje department.
+3. Omfaktorisering av koden i view efter vad som gjorts i modellen
+
+## Wrap up
+ 
+- Nästa möte: 9/10 kl 15:00. Stämma av med Oliver Karmetun 
