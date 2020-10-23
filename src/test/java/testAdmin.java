@@ -10,7 +10,7 @@ import org.junit.Test;
 
 import java.util.Date;
 /**
- * @author Victor Cousin, Moa Berglund, Markus Grahn, Oliver Andersson and Christian Lind
+ * @author Victor Cousin, Moa Berglund, Markus Grahn and Christian Lind
  */
 public class testAdmin {
 
