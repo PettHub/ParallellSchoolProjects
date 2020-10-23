@@ -26,7 +26,7 @@ Victor och Marcus påbörjade uml-diagram över modellen.
 Moa strukturerade om tester i CertificatHandler.
 
 ## Discussion items 
-
+- Ska vi implementera "typ av anställning" hos employeen (user story ID 02) i såpass sent skede?
 
 ## Outcomes and assignments 
 
@@ -36,6 +36,7 @@ Moa strukturerade om tester i CertificatHandler.
 4. Alla har läst igenom SDD och RAD och beslutar att dem är färdiga.
 5. Moa skrev sista kommentarer
 6. Christian mergade protokollgren till till master 
+7. Vi diskuterade fram att vi väljer att inte implementera typ av anställning nu då det är en såpass liten del och employeesorten fungerar ändå. Den försöker så jämt som möjligt fördela arbetspass istället. Dock sorterar den beroende på ockupiedtime, vilket gör att även den som är mest ledig inte ser ut att "vara på tur" att få arbetspass enligt employeesortern. Men vi tycker det fungerar såhär som demo.
 
 ## Wrap up
  
