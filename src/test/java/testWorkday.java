@@ -2,6 +2,8 @@ package test.java;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertNotSame;
+import static org.junit.Assert.assertSame;
 
 import main.java.model.*;
 import org.junit.Test;
@@ -15,7 +17,7 @@ public class testWorkday {
     @Test
     public void testoccupiesEmployee() {
         Admin a = Admin.getInstance();
-        boolean repeat[] = {true, true, true, true, true, true, true};
+        boolean[] repeat = {true, true, true, true, true, true, true};
         a.createNewEmployee("moa", "000211444444", "moa@email.com", "0315552266");
         Date d = new Date();
         d.setTime(d.getTime() + 1000);
@@ -35,22 +37,22 @@ public class testWorkday {
     public void testWeekly() { //yes, this is an insane test and I dont know what to do about it
         int dag = new Date().getDate() + 3;//the date we wanna set the workshifts at + however many days in the future you wanna set
         Admin a = Admin.getInstance();
-        boolean repeat[] = {true, true, true, false, false, true, false}; //what days we wanna set workshifts at
-        boolean repeat2[] = {true, false, true, false, false, false, false};
+        boolean[] repeat = {true, true, true, false, false, true, false}; //what days we wanna set workshifts at
+        boolean[] repeat2 = {true, false, true, false, false, false, false};
         a.createNewDepartment("Kassa", 1);
         a.createNewDepartment("Frukt", 1);
         a.createWorkshift(a.getDepartmentByName("Kassa"), OurCalendar.getInstance().getWorkday(dag).DATE + 100, OurCalendar.getInstance().getWorkday(dag).DATE + WeekHandler.plusMinutes(60), repeat);
         a.createWorkshift(a.getDepartmentByName("Kassa"), OurCalendar.getInstance().getWorkday(dag).DATE + 100, OurCalendar.getInstance().getWorkday(dag).DATE + WeekHandler.plusMinutes(60), repeat2);
         a.createWorkshift(a.getDepartmentByName("Frukt"), OurCalendar.getInstance().getWorkday(dag).DATE + 100, OurCalendar.getInstance().getWorkday(dag).DATE + WeekHandler.plusMinutes(60), repeat2);
-        int countKassa[] = {0, 0, 0, 0, 0, 0, 0}; //counts all WorkShifts for Kassa, starts at "dag"s weekday
-        int countFrukt[] = {0, 0, 0, 0, 0, 0, 0}; //counts all Workshifts for Frukt, starts at "dag"s weekday
+        int[] countKassa = {0, 0, 0, 0, 0, 0, 0}; //counts all WorkShifts for Kassa, starts at "dag"s weekday
+        int[] countFrukt = {0, 0, 0, 0, 0, 0, 0}; //counts all Workshifts for Frukt, starts at "dag"s weekday
         for (int i = 0; i < 7; i++) { //we set and check how many workshifts that actually have been set
             countKassa[i] = OurCalendar.getInstance().getWorkday(i + dag).getWorkShifts(a.getDepartmentByName("Kassa")).size();
             countFrukt[i] = OurCalendar.getInstance().getWorkday(i + dag).getWorkShifts(a.getDepartmentByName("Frukt")).size();
         }
         int offSet = new Date(OurCalendar.getInstance().getWorkday(dag).DATE).getDay(); //setting an offset so the order will match the order the days are set
-        int countExpectedKassa[] = {2, 1, 2, 0, 0, 1, 0}; //expected value of Kassa in the correct order sun-sat
-        int countExpectedFrukt[] = {1, 0, 1, 0, 0, 0, 0}; //expected value of Frukt in the correct order sun-sat
+        int[] countExpectedKassa = {2, 1, 2, 0, 0, 1, 0}; //expected value of Kassa in the correct order sun-sat
+        int[] countExpectedFrukt = {1, 0, 1, 0, 0, 0, 0}; //expected value of Frukt in the correct order sun-sat
         assertTrue(testArray(countExpectedKassa, countKassa, offSet));
         assertTrue(testArray(countExpectedFrukt, countFrukt, offSet));
 
@@ -72,7 +74,7 @@ public class testWorkday {
         Admin a = Admin.getInstance();
         a.createNewEmployee("moa", "000211444444", "moa@email.com", "0315552255");
         Date d = new Date();
-        boolean repeat[] = {false, false, false, false, false, false, false};
+        boolean[] repeat = {false, false, false, false, false, false, false};
         d.setTime(d.getTime() + (24 * 60 * 60 * 1000));
         CertificateHandler ch = CertificateHandler.getInstance();
         ch.createNewCertificate("Kassa");
@@ -100,7 +102,7 @@ public class testWorkday {
     @Test
     public void testCertifiedEmployee() {
         Admin a = Admin.getInstance();
-        boolean repeat[] = {true, true, true, true, true, true, true};
+        boolean[] repeat = {true, true, true, true, true, true, true};
         a.createNewEmployee("moa", "000211444444", "moa@email.com", "0315552566");
         Date d = new Date();
         d.setTime(d.getTime() + (WeekHandler.plusHours(24)));
@@ -120,12 +122,12 @@ public class testWorkday {
         } catch(IllegalArgumentException e) {
             assertEquals("The employee cannot occupy the shift", e.getMessage());
         }
-        assertTrue(workday.getWorkShifts(a.getDepartmentByName("Kassa")).get(0).getEmployee() != a.getEmployeeByName("moa"));
+        assertNotSame(workday.getWorkShifts(a.getDepartmentByName("Kassa")).get(0).getEmployee(), a.getEmployeeByName("moa"));
     }
 
     @Test
     public void testSwapOccupation() {
-        boolean repeat[] = {false, false, false, false, false, false, false};
+        boolean[] repeat = {false, false, false, false, false, false, false};
         Admin a = Admin.getInstance();
         a.createNewEmployee("moa", "000211444444", "moa@email.se", "0315552466"); //e1
         a.createNewEmployee("sam", "000211444442", "sam@ntiskolan.se", "0315352266"); //e2
@@ -152,11 +154,11 @@ public class testWorkday {
         workday.occupiesEmployee(workday2.getWorkShifts(a.getDepartmentByName("Kassa")).get(1), a.getEmployeeByName("mas")); //w4
 
         workday.swapOccupation(workday.getWorkShifts(a.getDepartmentByName("Kassa")).get(0), workday.getWorkShifts(a.getDepartmentByName("Kassa")).get(1));
-        assertTrue(workday.getWorkShifts(a.getDepartmentByName("Kassa")).get(0).getEmployee() == a.getEmployeeByName("mas"));
+        assertSame(workday.getWorkShifts(a.getDepartmentByName("Kassa")).get(0).getEmployee(), a.getEmployeeByName("mas"));
         workday.swapOccupation(workday.getWorkShifts(a.getDepartmentByName("Kassa")).get(0), workday2.getWorkShifts(a.getDepartmentByName("Kassa")).get(0));
-        assertTrue(workday.getWorkShifts(a.getDepartmentByName("Kassa")).get(0).getEmployee() == a.getEmployeeByName("mas"));
+        assertSame(workday.getWorkShifts(a.getDepartmentByName("Kassa")).get(0).getEmployee(), a.getEmployeeByName("mas"));
         workday.swapOccupation(workday.getWorkShifts(a.getDepartmentByName("Kassa")).get(1), workday2.getWorkShifts(a.getDepartmentByName("Kassa")).get(0));
-        assertTrue(workday.getWorkShifts(a.getDepartmentByName("Kassa")).get(1).getEmployee() == a.getEmployeeByName("sam"));
+        assertSame(workday.getWorkShifts(a.getDepartmentByName("Kassa")).get(1).getEmployee(), a.getEmployeeByName("sam"));
     }
 
     @Test(expected = IllegalArgumentException.class)

@@ -15,23 +15,23 @@ public class testWorkShift {
     @Test
     public void testAddCertificateToWorkShift() {
         Admin a = Admin.getInstance();
-        boolean repeat[] = {false, false, false, false, false, false, false};
+        boolean[] repeat = {false, false, false, false, false, false, false};
         CertificateHandler ch = CertificateHandler.getInstance();
         Date d = new Date();
         List<Certificate> allcert = new ArrayList<>();
         ch.createNewCertificate("Frukt");
         allcert.add(ch.getCertificate("Frukt"));
         a.createNewDepartment("Frukt", 1);
-        a.createWorkshift(a.getDepartmentByName("Frukt"), d.getTime()+1000, (d.getTime() + WeekHandler.plusHours(8)), allcert, repeat);
+        a.createWorkshift(a.getDepartmentByName("Frukt"), d.getTime() + 1000, (d.getTime() + WeekHandler.plusHours(8)), allcert, repeat);
         ch.createNewCertificate("Kassa");
         a.getDepartmentByName("Frukt").getShift(0).addCertificate(ch.getCertificate("Kassa"));
-        assertTrue(a.getDepartmentByName("Frukt").getShift(0).getCertificatesSize() == 2);
+        assertEquals(2, a.getDepartmentByName("Frukt").getShift(0).getCertificatesSize());
     }
 
 
     @Test
     public void testRemoveCertificateFromWorkShift() {
-        boolean repeat[] = {false, false, false, false, false, false, false};
+        boolean[] repeat = {false, false, false, false, false, false, false};
         Admin a = Admin.getInstance();
         Date d = new Date();
         CertificateHandler ch = CertificateHandler.getInstance();
@@ -39,16 +39,16 @@ public class testWorkShift {
         List<Certificate> allcert = new ArrayList<>();
         allcert.add(ch.getCertificate("Kassa"));
         a.createNewDepartment("Frukt", 1);
-        a.createWorkshift(a.getDepartmentByName("Frukt"), d.getTime()+1000, (d.getTime() + WeekHandler.plusHours(8)), allcert, repeat);
+        a.createWorkshift(a.getDepartmentByName("Frukt"), d.getTime() + 1000, (d.getTime() + WeekHandler.plusHours(8)), allcert, repeat);
         a.getDepartmentByName("Frukt").getShift(0).removeCertificate(ch.getCertificate("Kassa"));
-        assertTrue(a.getDepartmentByName("Frukt").getShift(0).getCertificatesSize() == 0);
+        assertEquals(0, a.getDepartmentByName("Frukt").getShift(0).getCertificatesSize());
     }
 
     @Test
     public void testRemoveWorkShift() {
         Admin a = Admin.getInstance();
         Date d = new Date();
-        boolean repeat[] = {false, false, false, false, false, false, false};
+        boolean[] repeat = {false, false, false, false, false, false, false};
         a.createNewDepartment("Kassa", 1);
         a.createWorkshift(a.getDepartmentByName("Kassa"), d.getTime() + 1111, d.getTime() + 11111, repeat);
         a.createWorkshift(a.getDepartmentByName("Kassa"), d.getTime() + 1111, d.getTime() + 11111, repeat);
@@ -60,11 +60,11 @@ public class testWorkShift {
     public void testEditEmployees() {
         Admin a = Admin.getInstance();
         Date d = new Date();
-        boolean repeat[] = {true, true, true, true, true, true, true};
+        boolean[] repeat = {true, true, true, true, true, true, true};
         a.createNewDepartment("Kassa", 1);
         a.createWorkshift(a.getDepartmentByName("Kassa"), d.getTime() + 1111, d.getTime() + 11111, repeat);
         a.createNewEmployee("Cristian är kass", "133742042069", "kass@gmail.com", "0315552266");
-        a.createWorkshift(a.getDepartmentByName("Kassa"), OurCalendar.getInstance().getWorkday(1).DATE + 10, OurCalendar.getInstance().getWorkday(1).DATE + 1100, repeat);
+        a.createWorkshift(a.getDepartmentByName("Kassa"), d.getTime() + 1000, d.getTime() + WeekHandler.plusMinutes(10), repeat);
         OurCalendar.getInstance().getWorkday(1).occupiesEmployee(a.getDepartmentByName("Kassa").getShift(0), a.getEmployeeByID("133742042069"));
         assertTrue(a.getDepartmentByName("Kassa").getShift(0).getEmployee().getPersonalId().equals("133742042069"));
         a.createNewEmployee("Markus passar bättre här", "694201337420", "bättre@gmail.com", "0315552666");
@@ -76,7 +76,7 @@ public class testWorkShift {
     public void testCreateWorkShiftExeptions() {
         Admin a = Admin.getInstance();
         Date d = new Date();
-        boolean repeat[] = {true, true, true, true, true, true, true};
+        boolean[] repeat = {true, true, true, true, true, true, true};
         a.createNewDepartment("Kassa", 1);
         a.createWorkshift(a.getDepartmentByName("Kassa"), d.getTime(), d.getTime() + 11111, repeat);
     }
