@@ -1,0 +1,42 @@
+# Meeting Agenda
+
+Group: 1 (gruppnamn: New Five)
+Date: 23/10 10:00-12:00
+Chair: TDA 367, Chalmers
+Participants: Moa Berglund, Markus Grahn, Victor Cousin, Christian Lind, Oliver Andersson
+Facilitator: Oliver Karmetun
+Sekreterare: Moa Berglund
+
+## Objectives 
+
+- Merga protokollbranch till master
+- Uppdatera sista UML
+- Skriva sista kommentarer
+- Fixa tester 
+- Läsa igenom RAD och SDD
+
+## Reports from previous meeting
+Christian fixade Maven och strukturerade projektet, och knapp för att kunna ta bort anställd från arbetspass i GUI.
+Moa har skrivit om alla responsibilities i rad. 
+Moa, Markus och Victor har skrivit manus för redovisning. 
+Christian, Markus och Victor skrev färdigt SDD.
+Oliver har fixat buggar och skrivit en del kommentarer. 
+Moa och Oliver påbörjade uml-diagram över vyn.
+Victor och Marcus påbörjade uml-diagram över modellen.
+Moa strukturerade om tester i CertificatHandler.
+
+## Discussion items 
+
+
+## Outcomes and assignments 
+
+1. Markus och Cristian fixade så alla tester fungerar.
+2. Moa och Oliver gjorde färdigt uml för vy
+3. Markus och Victor gjorde färdigt uml för modell
+4. Alla har läst igenom SDD och RAD och beslutar att dem är färdiga.
+5. Moa skrev sista kommentarer
+6. Christian mergade protokollgren till till master 
+
+## Wrap up
+ 
+- Nästa möte: 26/10 Redovisning!.
