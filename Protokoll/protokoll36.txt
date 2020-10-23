@@ -37,6 +37,7 @@ Moa strukturerade om tester i CertificatHandler.
 5. Moa skrev sista kommentarer
 6. Christian mergade protokollgren till till master 
 7. Vi diskuterade fram att vi väljer att inte implementera typ av anställning nu då det är en såpass liten del och employeesorten fungerar ändå. Den försöker så jämt som möjligt fördela arbetspass istället. Dock sorterar den beroende på ockupiedtime, vilket gör att även den som är mest ledig inte ser ut att "vara på tur" att få arbetspass enligt employeesortern. Men vi tycker det fungerar såhär som demo.
+8. Nu när programmet är färdigt inser vi att GUI ser inte exakt ut som planerat i skisser och GUI-dokument, då vi stött på bättre/enklare lösningar på vägen under programmeringen.
 
 ## Wrap up
  
