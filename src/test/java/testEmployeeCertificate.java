@@ -7,7 +7,7 @@ import java.util.Date;
 
 import static org.junit.Assert.assertEquals;
 /**
- * @author arkus Grahn and Christian Lind
+ * @author Markus Grahn and Christian Lind
  */
 public class testEmployeeCertificate {
     @Test
