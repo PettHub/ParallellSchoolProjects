@@ -67,15 +67,25 @@ public class Admin implements Observable {
         employee.newName(name);
         notifyObservers();
     }
-
+    
+   /**
+    * Adds chosen observer to the list of observers that shall be added to the list of observers
+    * @param o the observer to be added
+    */
     public void addObserver(Observer o) {
         toBeAdded.add(o);
     }
-
+   /**
+    * Adds chosen observer to the list of observers that shall be removed from the list of observers
+    * @param o the observer to be removed
+    */
     public void removeObserver(Observer o) {
         toBeRemoved.add(o);
     }
-
+    
+   /**
+    * Updates the list of accurate observers and then notifies all in the list about update
+    */
     public void notifyObservers() {
         observers.removeAll(toBeRemoved);
         toBeRemoved.clear();
@@ -413,6 +423,11 @@ public class Admin implements Observable {
         return DEPARTMENTS;
     }
 
+   /**
+    * Changes the name of a chosen department
+    * @param department department that shall be renamed
+    * @param name new name 
+    */
     public void changeDepartmentName(Department department, String name) {
         department.setName(name);
     }
