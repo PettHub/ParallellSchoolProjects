@@ -8,7 +8,9 @@ import java.util.Date;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-
+/**
+ * @author Moa Berglund, Victor Cousin
+ */
 public class testCertificateHandler {
      @Before
     public void before(){  
